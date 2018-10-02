@@ -177,4 +177,6 @@ exec_always feh --bg-scale /home/erik/.config/i3/backgrounds/1.jpg
 # compton for transitions and transparency
 exec_always compton -f
 
-
+# keepass2
+exec mount /dev/sdc1 /storage/
+exec keepass2
