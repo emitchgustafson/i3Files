@@ -153,7 +153,7 @@ function __prompt_command() {
    ## can add `kill -l $?` to test to filter backgrounded
    PS1+="(${Red}${EXIT}${ACol})"     ## Add exit code, if non 0
   else
-   PS1+="(${Gre} ${ACol})"     ## Add exit code, if non 0
+   PS1+="(${MGr} ${ACol})"     ## Add exit code, if non 0
 
   fi
 
@@ -245,7 +245,7 @@ function __prompt_command() {
     if [ "$GMod" -gt "0" ]; then
      PS1+="${Red}${GMod}M${DCol}"
     fi
-    local GMod2="$(echo ${GStat} | tr ':' '\n' | grep -c "^[ MARC]")"
+    local GMod2="$(echo ${GStat} | tr ':' '\n' | grep -c "^[ MARC] ")"
     if [ "$GMod2" -gt "0" ]; then
      PS1+="${Gre}${GMod2}M${DCol}"
     fi
