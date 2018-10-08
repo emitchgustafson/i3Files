@@ -138,24 +138,27 @@ function __prompt_command() {
  local Pur='\[\e[0;35m\]';    local BPur='\[\e[1;35m\]';    local UPur='\[\e[4;35m\]';    local IPur='\[\e[0;95m\]';    local BIPur='\[\e[1;95m\]';    local On_Pur='\e[45m';    local On_IPur='\[\e[0;105m\]';
  local Cya='\[\e[0;36m\]';    local BCya='\[\e[1;36m\]';    local UCya='\[\e[4;36m\]';    local ICya='\[\e[0;96m\]';    local BICya='\[\e[1;96m\]';    local On_Cya='\e[46m';    local On_ICya='\[\e[0;106m\]';
  local Whi='\[\e[0;37m\]';    local BWhi='\[\e[1;37m\]';    local UWhi='\[\e[4;37m\]';    local IWhi='\[\e[0;97m\]';    local BIWhi='\[\e[1;97m\]';    local On_Whi='\e[47m';    local On_IWhi='\[\e[0;107m\]';
- local DCol=${ICya}
+ local Gry='\[\e[0;90m\]';    local BGry='\[\e[1;90m\]';    local UGry='\[\e[4;90m\]';
+ local MGr='\e[38;5;82m';
+ local DCol=${Whi}
+ local ACol=${Gry}
  ### End Color Vars ### }}}
 
  if [ $UID -eq "0" ];then
-  PS1+="${Red}\h \W ->${RCol} "       ## Set prompt for root
+  PS1+="${Red}\u \h \W ->${RCol} "       ## Set prompt for root
  else
-  PS1+="${DCol}"
+  PS1+="${ACol}"
 
   if [ $EXIT != 0 ]; then
    ## can add `kill -l $?` to test to filter backgrounded
-   PS1+="(${Red}${EXIT}${DCol})"     ## Add exit code, if non 0
+   PS1+="(${Red}${EXIT}${ACol})"     ## Add exit code, if non 0
   else
-   PS1+="(${Gre} ${DCol})"     ## Add exit code, if non 0
+   PS1+="(${Gre} ${ACol})"     ## Add exit code, if non 0
 
   fi
 
 
-  PS1+=" \h \w"    ## Current working dir
+  PS1+="-(${DCol}\u${ACol})-(${DCol}\h${ACol})-(${DCol}\d \t${ACol})"    ## Current working dir
 
   # Check Jobs
   command jobs 2>/dev/null
@@ -163,17 +166,17 @@ function __prompt_command() {
    #Backgrounded jobs
    local BKGJBS=$(jobs -r | wc -l | tr -d ' ')
    if [ ${BKGJBS} -gt 2 ]; then
-    PS1+=" ${Red}[bg:${BKGJBS}]${RCol}"
+    PS1+="-(${Red}bg:${BKGJBS}${ACol})"
    elif [ ${BKGJBS} -gt 0 ]; then
-    PS1+=" ${Yel}[bg:${BKGJBS}]${RCol}"
+    PS1+="-(${Yel}bg:${BKGJBS}${ACol})"
    fi
 
    # Stopped Jobs
    local STPJBS=$(jobs -s | wc -l | tr -d ' ')
    if [ ${STPJBS} -gt 2 ]; then
-    PS1+=" ${Red}[stp:${STPJBS}]${RCol}"
+    PS1+="-(${Red}stp:${STPJBS}${ACol})"
    elif [ ${STPJBS} -gt 0 ]; then
-    PS1+=" ${Yel}[stp:${STPJBS}]${RCol}"
+    PS1+="-(${Yel}stp:${STPJBS}${ACol})"
    fi
   fi
   #End Jobs
@@ -183,6 +186,7 @@ function __prompt_command() {
    local GStat="$(git status --porcelain -b 2>/dev/null | tr '\n' ':')"
 
    if [ "$GStat" ]; then
+    PS1+="-("
     #Fetch Time Check
     local LAST=$(stat -c %Y $(git rev-parse --git-dir 2>/dev/null)/FETCH_HEAD 2>/dev/null)
     if [ "${LAST}" ]; then
@@ -218,7 +222,7 @@ function __prompt_command() {
     fi
     #End Branch
 
-    PS1+=" ${GitCol}[$GBra]${DCol}"	## Add result to prompt
+    PS1+="${GitCol}[$GBra]${DCol}"	## Add result to prompt
 
     #Status
     ## Test Modified and Untracked for "0"
@@ -227,31 +231,36 @@ function __prompt_command() {
     #Ahead
     local GAhe="$(echo ${GStat} | tr ':' '\n' | grep "^##" | grep -o "ahead [0-9]\{1,\}" | grep -o "[0-9]\{1,\}")"
     if [ "$GAhe" ]; then
-     PS1+="${Gre}↑${DCol}${GAhe}"
+     PS1+="${Pur}${GAhe}A${DCol}"
     fi
 
     #Behind
     local GBeh="$(echo ${GStat} | tr ':' '\n' | grep "^##" | grep -o "behind [0-9]\{1,\}" | grep -o "[0-9]\{1,\}")"
     if [ "$GBeh" ]; then
-     PS1+="${Red}↓${DCol}${GBeh}"
+     PS1+="${Pur}${GBeh}B${DCol}"
     fi
 
     #Modified
     local GMod="$(echo ${GStat} | tr ':' '\n' | grep -c "^[ MARC]M")"
     if [ "$GMod" -gt "0" ]; then
-     PS1+="${Pur}≠${DCol}${GMod}"
+     PS1+="${Red}${GMod}M${DCol}"
+    fi
+    local GMod2="$(echo ${GStat} | tr ':' '\n' | grep -c "^[ MARC]")"
+    if [ "$GMod2" -gt "0" ]; then
+     PS1+="${Gre}${GMod2}M${DCol}"
     fi
 
     #Untracked
     local GUnt="$(echo ${GStat} | tr ':' '\n' | grep -c "^\?")"
     if [ "$GUnt" -gt "0" ]; then
-     PS1+="${Yel}?${DCol}${GUnt}"
+     PS1+="${Yel}${GUnt}U${DCol}"
     fi
     #End Commit Status
+    PS1+="${ACol})"
    fi
   fi
  #End Git Status
 
- PS1+=" ${DCol}>>>${RCol}"          ## End of PS1
+ PS1+="${ACol}\n(${DCol}\w${ACol})-->${RCol}"          ## End of PS1
  fi
 }
