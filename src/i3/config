@@ -167,26 +167,24 @@ bar {
         #tray_output primary
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
+#bar
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Lock
-#bindsym $mod+Shift+l exec i3lock -f -c 000000
-bindsym $mod+Shift+l exec /home/erik/.config/i3/scripts/lockScreen.sh
+#indsym $mod+Shift+l exec i3lock -f -c 000000
+bindsym $mod+Shift+l exec /home/mitch/.config/i3/scripts/lockScreen.sh
 
 
 # Set monitor config
-exec /home/erik/.config/i3/scripts/monitorconfig.sh
-
-# Set workspaces to monitors
-workspace $workspace1 output HDMI-1-2
-workspace $workspace2 output DP-4
-workspace $workspace3 output DP-2
+exec /home/mitch/.config/i3/scripts/monitorconfig.sh
 
 # Set wallpaper (need to install feh)
-exec_always feh --bg-scale /home/erik/.config/i3/backgrounds/1.jpg
+exec_always feh --bg-scale /home/mitch/.config/i3/backgrounds/1.jpg
 
 # compton for transitions and transparency
 exec_always compton -f
 
 # keepass2
-exec mount /dev/sdc1 /storage/
-exec keepass2
+#exec mount /dev/sdc1 /storage/
+#exec keepass2
