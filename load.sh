@@ -1,5 +1,6 @@
 #!/bin/bash
-cp -r ~/.config/i3 /tmp/config/i3
+mkdir /tmp/config
+cp -r ~/.config/i3 /tmp/config/
 cp src/fonts/*.otf ~/.local/share/fonts/
 cp -r src/i3 ~/.config/
 cp -r src/ranger ~/.config

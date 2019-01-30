@@ -173,14 +173,14 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Lock
 #indsym $mod+Shift+l exec i3lock -f -c 000000
-bindsym $mod+Shift+l exec /home/mitch/.config/i3/scripts/lockScreen.sh
+bindsym $mod+Shift+l exec ~/.config/i3/scripts/lockScreen.sh
 
 
 # Set monitor config
-exec /home/mitch/.config/i3/scripts/monitorconfig.sh
+exec ~/.config/i3/scripts/monitorconfig.sh
 
 # Set wallpaper (need to install feh)
-exec_always feh --bg-scale /home/mitch/.config/i3/backgrounds/1.jpg
+exec_always feh --bg-scale ~/.config/i3/backgrounds/1.jpg
 
 # compton for transitions and transparency
 exec_always compton -f
