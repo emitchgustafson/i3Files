@@ -242,7 +242,7 @@ bindsym Control+Print exec gnome-screenshot -i
 # Startup Applications
 exec_always feh --bg-scale /home/$USER/.config/i3/backgrounds/1.jpg
 exec --no-startup-id xfce4-panel --disable-wm-check
-exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id compton --config ~/.config/compton.conf
 exec nautilus
 assign [class="Nautilus"] 2
 exec subl
