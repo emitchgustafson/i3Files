@@ -242,7 +242,8 @@ bindsym Control+Print exec gnome-screenshot -i
 # Startup Applications
 exec_always feh --bg-scale /home/$USER/.config/i3/backgrounds/1.jpg
 exec --no-startup-id xfce4-panel --disable-wm-check
-exec --no-startup-id compton --config ~/.config/compton.conf
+#exec --no-startup-id compton --config ~/.config/compton.conf
+exec_always compton -f
 exec nautilus
 assign [class="Nautilus"] 2
 exec subl
@@ -255,16 +256,6 @@ exec simplenote
 assign [class="Simplenote"] 3
 exec telegram-desktop
 assign [class=Telegram] 5
-
-# DarkGrey background with white text - not focus grey background - black text
-# Windows decoration colors
-# class                 border  backgr. text    indicator
-client.placeholder      #242424 #242424 #242424
-client.background       #242424 #242424 #242424
-client.focused          #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
-client.unfocused        #222222 #222222 #aaaaaa #222222
-client.focused_inactive #222222 #222222 #a9a9a9 #222222
-client.urgent #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 
 #filemanager focus
 for_window [class="Nemo"] focus
