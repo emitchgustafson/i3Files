@@ -33,21 +33,28 @@ sleep 2
 # other programs
 # spotify
 # need keepass2
-sudo apt-get install keepass2
+$install keepass2
 
 # redshift
-sudoa apt-get install redshift
+$install redshift
 
 # Nautilius is breaking on 16.04 so installing this file explorer
-sudo apt-get install thunar -y
+$install thunar
 # Install icons required for thunar-if changing icons anyway you don't need this
-sudo apt-get install gnome-icon-theme-full -y
+$install gnome-icon-theme-full
 
 # Ranger
-sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfoi -y
+$install ranger caca-utils highlight atool w3m poppler-utils mediainfoi -y
 
 # lets autoremove as a last command to clean things up
 sudo apt-get autoremove
+
+# Polybar
+$install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev 
+$install libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config 
+$install python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev 
+$install libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2
+cd polybar && ./build.sh
 
 #load included config files
 ./load.sh
