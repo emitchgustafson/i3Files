@@ -12,5 +12,7 @@ cp -r src/i3 ~/.config/
 cp -r src/ranger ~/.config/
 #xfce4
 cp -r src/xfce4 ~/.config/
+#polybar
+cp -r src/polybar ~/.config/
 #bashrc
 cp src/bashrc ~/.bashrc

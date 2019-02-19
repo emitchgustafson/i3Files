@@ -13,7 +13,7 @@ $install lightdm
 
 #Install i3wm
 echo "Installing i3wm & config"
-$install i3 i3status dmenu i3lock xbacklight feh conky
+$install i3 i3status dmenu i3lock xbacklight feh conky rofi
 $install arandr i3blocks scrot
 #Use XFCE panel instead of default i3 and xfce plugins
 $install xfwm4 xfce4-statusnotifier-plugin xfce4-statusnotifier-plugin
