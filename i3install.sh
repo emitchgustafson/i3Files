@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ## Define some variables to make it less typing
 install='sudo apt install -y'
-update='sudo apt update;sudo apt upgrade -y'
+update='sudo apt-get update; sudo apt-get upgrade -y'
 user=$USER
 
 #Update and Upgrade
@@ -47,14 +47,14 @@ $install gnome-icon-theme-full
 $install ranger caca-utils highlight atool w3m poppler-utils mediainfoi -y
 
 # lets autoremove as a last command to clean things up
-sudo apt-get autoremove
+sudo apt-get -y autoremove
 
 # Polybar
 $install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev 
 $install libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config 
 $install python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev 
 $install libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2
-cd polybar && ./build.sh
+cd polybar && ./build.sh && cd ..
 
 #load included config files
 ./load.sh
