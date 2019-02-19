@@ -16,10 +16,10 @@ echo "Installing i3wm & config"
 $install i3 i3status dmenu i3lock xbacklight feh conky rofi
 $install arandr i3blocks scrot
 #Use XFCE panel instead of default i3 and xfce plugins
-$install xfwm4 xfce4-statusnotifier-plugin xfce4-statusnotifier-plugin
-$install xfce4-pulseaudio-plugin xfce4-sensors-plugin xfce4-battery-plugin
-$install xfce4-panel xfce4-clipman-plugin xfce4-session xfce4-whiskermenu-plugin
-$install xfce4-mount-plugin xfce4-kbdleds-plugin
+#$install xfwm4 xfce4-statusnotifier-plugin xfce4-statusnotifier-plugin
+#$install xfce4-pulseaudio-plugin xfce4-sensors-plugin xfce4-battery-plugin
+#$install xfce4-panel xfce4-clipman-plugin xfce4-session xfce4-whiskermenu-plugin
+#$install xfce4-mount-plugin xfce4-kbdleds-plugin
 # Installs compton to prevent screen tearing
 sleep 2
 $install compton unclutter
