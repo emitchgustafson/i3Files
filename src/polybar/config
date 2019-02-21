@@ -127,11 +127,11 @@ module-margin-right = 3
 font-0 = "Noto Sans:size=10;0"
 font-1 = "Noto Sans:size=10;0"
 font-2 = "Noto Sans Mono:size=10;0"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
-font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-5 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-5 = "Font Awesome 5 Brands:pixelsize=10;1"
 
-modules-left = i3 
+modules-left = drun filesystem memory cpu 
 modules-center = xwindow
 modules-right = network1 powermenu
 
@@ -224,8 +224,8 @@ font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-5 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = hostname kernel
-modules-center = 
-modules-right = filesystem memory cpu uptime date
+modules-center = i3
+modules-right = uptime date
 
 separator = |
 
@@ -521,8 +521,19 @@ content = 
 content-padding = 2
 content-background = ${colors.foreground}
 content-foreground = ${colors.background}
-click-left = ~/.config/i3/scripts/pmenu_g
-click-right = ~/.config/i3/scripts/pmenu_g
+click-left = ~/.config/i3/scripts/lock_menu.sh
+click-right = ~/.config/i3/scripts/lock_menu.sh
+
+################################################################################
+
+[module/drun]
+type = custom/text
+content = ""
+content-padding = 2
+content-background = ${colors.foreground}
+content-foreground = ${colors.background}
+click-left = ~/.config/i3/scripts/drun_menu.sh
+click-right = ~/.config/i3/scripts/drun_menu.sh
 
 ################################################################################
 

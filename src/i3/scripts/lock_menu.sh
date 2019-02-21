@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 5 -yoffset -75 -xoffset -69 -width 15 -hide-scrollbar -line-padding 4 -padding 20 -lines 5 -font "Fantasque Sans Mono 10" <<< "Lock|Dark|Logout|Reboot|Shutdown")"
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 5 -yoffset -35 -xoffset -5 -width 15 -hide-scrollbar -line-padding 4 -padding 20 -lines 5 -font "Fantasque Sans Mono 10" -color-normal "#29366a,#86f2ff,#29366a,#86f2ff,#29366a" -color-window "#29366a,#29366a,#29366a" <<< "Lock|Dark|Logout|Reboot|Shutdown")"
 TMPBG=/tmp/screen.png
 
 
