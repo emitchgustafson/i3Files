@@ -233,7 +233,7 @@ client.urgent               $night_background   $night_underline        $night_b
 
 
 # Polybar
-exec_always /home/$USER/.config/i3/scripts/startNightMode.sh
+exec_always /home/$USER/.config/i3/scripts/startPolybar.sh
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run -l 20
@@ -248,8 +248,7 @@ bindsym $mod+l exec ~/.config/i3/scripts/lock_menu.sh
 bindsym Control+Print exec gnome-screenshot -i
 
 # Startup Applications
-# feh executed by script that starts polybar
-#exec_always feh --bg-scale /home/$USER/.config/i3/backgrounds/night_wallpaper.jpg
+exec_always feh --bg-scale /home/$USER/.config/i3/backgrounds/night_wallpaper.jpg
 #exec --no-startup-id xfce4-panel --disable-wm-check
 #exec --no-startup-id compton --config ~/.config/compton.conf
 exec_always compton -f
