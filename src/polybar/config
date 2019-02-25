@@ -291,14 +291,14 @@ format-underline = ${colors.underline}
 ;   <ramp-coreload>
 format = <label> <ramp-coreload>
 
-format-padding = 2
+format-padding = 1
 
 ; Available tokens:
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
 label-font = 3
-label = CPU %percentage:3%%
+label = %percentage:3%%
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 3
 ramp-coreload-0-foreground = #aaff77
@@ -389,7 +389,7 @@ interval = 1
 ;   %mb_total%
 label = %gb_used%/%gb_total%
 
-format = Mem <label>
+format = <label>
 format-prefix = 
 format-prefix-foreground = ${colors.underline}
 format-underline = ${colors.underline}
