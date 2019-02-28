@@ -1,1 +1,1 @@
-rofi -modi drun -show drun -location 7 -yoffset -35 -xoffset 5 -font "Fantasque Sans Mono 10"  -color-normal "#29366a,#86f2ff,#29366a,#86f2ff,#29366a" -color-window "#29366a,#29366a,#29366a"
+rofi -modi drun -show drun -location 7 -yoffset -35 -xoffset 5 -hide-scrollbar -line-padding 4 -padding 20 -font "Fantasque Sans Mono 10"  -color-normal "#29366a,#86f2ff,#29366a,#86f2ff,#29366a" -color-window "#29366a,#29366a,#29366a"
