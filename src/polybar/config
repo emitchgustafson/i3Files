@@ -562,7 +562,7 @@ strip-wsnumbers = true
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
 ; Default: false
-index-sort = false
+index-sort = true
 
 ; Create click handler used to focus workspace
 ; Default: true
