@@ -52,8 +52,9 @@ sudo apt-get -y autoremove
 # Polybar
 $install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev 
 $install libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config 
-$install python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev 
+$install python-xcbgen xcb-proto i3-wm libasound2-dev libmpdclient-dev 
 $install libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2
+$install libxcb-xrm-dev # put this on seperate line because it doen't always exsist
 cd polybar && ./build.sh && cd ..
 
 #load included config files
