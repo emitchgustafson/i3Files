@@ -3,4 +3,5 @@ Terminal
 -set colors in profile preferences
 -set transparencey in profile preferences
 -set scroll hiding in profile preferences
--set font in rofile preferences courier 10 pt bold
+-set font in profile preferences courier 10 pt bold size 9
+-set theme in lxappearence
