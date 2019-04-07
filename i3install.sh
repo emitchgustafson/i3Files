@@ -49,6 +49,11 @@ $install ranger caca-utils highlight atool w3m poppler-utils mediainfo
 # lets autoremove as a last command to clean things up
 sudo apt-get -y autoremove
 
+# build theme
+$install autoconf automake pkg-config libgtk-3-dev
+cd arc-theme && ./autogen.sh --prefix=/usr --disable-light --disable-darker && sudo make install && cd .. 
+
+
 # Polybar
 $install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev 
 $install libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config 
