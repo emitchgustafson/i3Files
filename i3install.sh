@@ -38,7 +38,7 @@ $install \
   xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev \
   libiw-dev libcurl4-openssl-dev libpulse-dev \
   libxcb-composite0-dev xcb libxcb-ewmh2
-pushd polybar && ./build.sh --all-features -g && sudo make install && popd
+pushd polybar && git checkout 3.4.3 && ./build.sh --all-features -g --auto && popd
 
 #load included config files
 ./load.sh
