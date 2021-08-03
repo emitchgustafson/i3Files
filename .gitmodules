@@ -1,0 +1,3 @@
+[submodule "src/polybar"]
+	path = src/polybar
+	url = https://github.com/polybar/polybar.git
