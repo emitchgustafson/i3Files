@@ -13,7 +13,7 @@ $update
 
 #Install i3wm
 echo "Installing i3wm & config"
-$install i3 i3status dmenu i3lock xbacklight feh conky rofi
+$install lightdm i3 i3status dmenu i3lock xbacklight feh conky rofi
 $install arandr i3blocks scrot jq
 sleep 2
 $install compton unclutter
@@ -31,14 +31,16 @@ $install ranger caca-utils highlight atool w3m poppler-utils mediainfo
 sudo apt-get -y autoremove
 
 # Polybar
-$install \
-  cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev \
-  libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev \
-  libxcb-util0-dev libxcb-xkb-dev pkg-config python3-xcbgen \
-  xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev \
-  libiw-dev libcurl4-openssl-dev libpulse-dev \
-  libxcb-composite0-dev xcb libxcb-ewmh2
-pushd polybar && git checkout 3.4.3 && ./build.sh --all-features -g --auto && popd
+# $install \
+#   cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev \
+#   libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev \
+#   libxcb-util0-dev libxcb-xkb-dev pkg-config python3-xcbgen \
+#   xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev \
+#   libiw-dev libcurl4-openssl-dev libpulse-dev \
+#   libxcb-composite0-dev xcb libxcb-ewmh2
+# pushd polybar && git checkout 3.4.3 && ./build.sh --all-features -g --auto && popd
+
+sudo apt install polybar
 
 #load included config files
 ./load.sh
