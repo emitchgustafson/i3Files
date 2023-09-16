@@ -15,5 +15,11 @@ cp -r src/ranger ~/.config/
 cp -r src/xfce4 ~/.config/
 #polybar
 cp -r src/polybar ~/.config/
+#Rofi
+cp -r src/rofi ~/.config
 #bashrc
 cp src/bashrc ~/.bashrc
+#zshrc
+cp src/zshrc ~/.zshrc
+#powerlevel10k
+cp src/p10k.zsh ~/.p10k.zsh
