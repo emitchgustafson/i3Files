@@ -12,7 +12,7 @@ sudo apt update && sudo apt upgrade -y
 
 #Install i3wm
 echo "Installing i3wm & config"
-$install i3 i3status dmenu i3lock xbacklight feh conky rofi polybar
+$install i3 i3status dmenu i3lock xbacklight feh conky rofi polybar xfce4-terminal
 $install arandr i3blocks scrot jq; true
 sleep 2
 $install compton unclutter
