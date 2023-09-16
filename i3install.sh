@@ -8,6 +8,9 @@ user=$USER
 echo "Updating and Upgrading"
 sudo apt update && sudo apt upgrade -y
 
+# Install helpers
+$install vim arandr
+
 #Install ohmyzsh
 # zsh and curl
 $install curl zsh
