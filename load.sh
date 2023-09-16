@@ -1,6 +1,7 @@
 #!/bin/bash
+echo "Loading Configs..."
 #put config backup in temp incase this is an accident
-mkdir /tmp/configbak
+mkdir -p /tmp/configbak
 cp -r ~/.config/i3 /tmp/configbak/
 #fonts
 mkdir ~/.local/share/fonts/ 2> /dev/null 
