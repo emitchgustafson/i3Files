@@ -1,0 +1,58 @@
+configuration {
+  location: 7;
+  fonts: "Fantasque Sans Mono 10";
+}
+
+window {
+  width: 480px;
+  height: 240px;
+  y-offset: -35px;
+  x-offset: 5px;
+  background-color: #29366a;
+  border-color: #29366a;
+}
+
+prompt {
+  enabled: false;
+  text-color: #86f2ff;
+}
+
+inputbar {
+  background-color: #29366a;
+  border-color: #29366a;
+}
+
+entry {
+  placeholder: "";
+  placeholder-color: #86f2ff;
+}
+
+listview {
+  background-color: #29366a;
+  border-color: #29366a;
+  scrollbar: false;
+}
+
+element {
+  background-color: #29366a;
+  border-color: #29366a;
+}
+
+element normal.normal{
+  background-color: #29366a;
+  border-color: #29366a;
+  text-color: #86f2ff;
+}
+
+element alternate.normal{
+  background-color: #29366a;
+  border-color: #29366a;
+  text-color: #86f2ff;
+}
+
+element selected.normal{
+  background-color: #86f2ff;
+  border-color: #86f2ff;
+  text-color: #29366a;
+}
+

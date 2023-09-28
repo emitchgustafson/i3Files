@@ -23,3 +23,5 @@ cp src/bashrc ~/.bashrc
 cp src/zshrc ~/.zshrc
 #powerlevel10k
 cp src/p10k.zsh ~/.p10k.zsh
+#rofi config
+cp -r src/rofi ~/.config/
