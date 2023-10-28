@@ -61,12 +61,14 @@ zlib1g-dev \
 # srecord
 
 
-# pip3 install \
-# capstone \
-# cstruct \
-# pycryptodome \
-# pyqtgraph \
-# ubi_reader 
+pip3 install \
+capstone \
+cstruct \
+pycryptodome \
+pyqtgraph \
+ubi_reader \
+pwntools
+
 
 # sudo pip3 install \
 # capstone \
