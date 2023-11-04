@@ -1,4 +1,6 @@
-pip3 install \
+#!/bin/bash
+
+pip3 install --system \
 cstruct \
 pycryptodome \
 ubi_reader \
