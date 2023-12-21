@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install code --classic
+sudo snap install code --classic
 
 code --install-extension alefragnani.Bookmarks
 code --install-extension alefragnani.project-manager
