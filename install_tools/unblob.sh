@@ -7,7 +7,7 @@ echo '##################### Installing Unblob #####################'
 export DEBIAN_FRONTEND=noninteractive
 
 # unblob
-pip3 install --system unblob
+pip3 install unblob
 
 # 7z
 sudo apt install -y p7zip-full p7zip-rar

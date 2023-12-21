@@ -36,7 +36,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 #Install i3wm
 echo "Installing i3wm & config"
 $install i3 i3status dmenu i3lock xbacklight feh conky rofi polybar xfce4-terminal 
-$install arandr i3blocks scrot jq imagemagick
+$install arandr i3blocks scrot jq imagemagick mate-polkit
 sleep 2
 $install compton unclutter
 #hides mouse when not in use.

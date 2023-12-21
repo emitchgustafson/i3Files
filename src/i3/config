@@ -247,6 +247,7 @@ bindsym Control+Print exec gnome-screenshot -i
 
 # Startup Applications
 exec_always feh --bg-scale /home/$USER/.config/i3/backgrounds/night_wallpaper.jpg
+exec_always /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
 #exec --no-startup-id xfce4-panel --disable-wm-check
 #exec --no-startup-id compton --config ~/.config/compton.conf
 exec_always compton -f
