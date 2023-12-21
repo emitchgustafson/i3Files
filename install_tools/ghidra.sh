@@ -10,9 +10,9 @@ sudo unzip ghidra_10.4_PUBLIC_20230928.zip
 
 sudo ln -s /opt/ghidra_10.4_PUBLIC /opt/ghidra
 
-mkdir -p /home/vagrant/.local/share/applications/
+mkdir -p /home/$USER/.local/share/applications/
 
-cat << EOF > /home/vagrant/.local/share/applications/ghidra.desktop
+cat << EOF > /home/$USER/.local/share/applications/ghidra.desktop
 [Desktop Entry]
 Name=Ghidra
 Exec=/opt/ghidra/ghidraRun
