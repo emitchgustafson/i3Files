@@ -1,0 +1,15 @@
+1. Enable root:
+	`sudo passwd root`
+1. login as root
+2. export usernames:
+	`export OLDUSER=user`
+	`export NEWUSER=new
+3. kill all old programs
+	`pkill -9 -u $OLDUSER`
+4. change username
+	`usermod -l $NEWUSER -d /home/$NEWUSER -m $OLDUSER
+5. change password:
+	`passwd $NEWUSER`
+6. reboot, login as new user
+7. disable root:
+	`sudo passwd -l root`
