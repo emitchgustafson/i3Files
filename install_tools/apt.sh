@@ -28,6 +28,7 @@ qemu-system \
 qemu-utils \
 squashfs-tools \
 socat \
+sshfs \
 tree \
 vim \
 virt-manager \
