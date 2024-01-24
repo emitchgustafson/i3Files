@@ -6,6 +6,7 @@ adb \
 arandr \
 baobab \
 binwalk \
+btop \
 build-essential \
 bzip2 \
 cifs-utils \
@@ -18,12 +19,15 @@ liblzma-dev \
 liblzo2-dev \
 libvirt-dev \
 make \
+meld \
 net-tools \
 nfs-common \
 nmap \
 openjdk-18-jdk \
-python3-pip \
 python3 \
+python3-dev \
+python3-pip \
+python3-venv \
 qemu-system \
 qemu-utils \
 squashfs-tools \
@@ -34,6 +38,7 @@ vim \
 virt-manager \
 virt-viewer \
 vlc \
+x11-xserver-utils \
 zsh-autosuggestions \
 zlib1g-dev \
 
