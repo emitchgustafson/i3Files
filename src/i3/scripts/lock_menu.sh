@@ -14,6 +14,6 @@ case "$MENU" in
 esac
 
 # do this down here so rofi isn't in the screen shot
-scrot -d 1 /tmp/screen.png
+scrot -o -d 1 /tmp/screen.png
 convert $TMPBG -scale 10% -scale 1000% $TMPBG
 i3lock -u -i $TMPBG
